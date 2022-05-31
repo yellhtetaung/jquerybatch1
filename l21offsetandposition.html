@@ -15,7 +15,7 @@
             .box{
                 width: 80px;
                 height: 80px;
-                margin: 0;
+                margin: 5px;
             }
         </style>
     </head>
@@ -55,7 +55,7 @@
                 })
 
                 // position()
-                (".box").click(function(){
+                $(".box").click(function(){
                     var positionbox = $(this).position();
                     $("#presultl").html("lef position: <b>"+positionbox.left+"</b>");
                     $("#presultt").html("top position: <b>"+positionbox.top+"</b>");
