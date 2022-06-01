@@ -46,7 +46,7 @@
             $(document).ready(function(){
                 // console.log('hi');
 
-                // offset()
+                // offset() count margin
                 $(".box").click(function(){
                     var offsetbox = $(this).offset();
                     $("#oresultl").html("left offset: <b>"+offsetbox.left+"</b>");
@@ -54,7 +54,7 @@
 
                 })
 
-                // position()
+                // position() not count margin
                 $(".box").click(function(){
                     var positionbox = $(this).position();
                     $("#presultl").html("lef position: <b>"+positionbox.left+"</b>");
