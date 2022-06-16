@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UI effect & show/hide/toggle Method</title>
+    <link href="./libs/jquery-ui-1.13.1/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 1200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+
+            display: flex;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+        }
+
+        .square1,
+        .square7 {
+            background-color: green;
+        }
+
+        .square2,
+        .square8 {
+            background-color: orange;
+        }
+
+        .square3,
+        .square9 {
+            background-color: blue;
+        }
+
+        .square4,
+        .square10 {
+            background-color: violet;
+        }
+
+        .square5,
+        .square11 {
+            background-color: brown;
+        }
+
+        .square6,
+        .square12 {
+            background-color: steelblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box square1">1</div>
+        <div class="box square2">2</div>
+        <div class="box square3">3</div>
+        <div class="box square4">4</div>
+        <div class="box square5">5</div>
+        <div class="box square6">6</div>
+        <div class="box square7">7</div>
+        <div class="box square8">8</div>
+        <div class="box square9">9</div>
+        <div class="box square10">10</div>
+        <div class="box square11">11</div>
+        <div class="box square12">12</div>
+    </div>
+
+    <div class="control">
+        <button type="button" id="shkbtn">Shake</button>
+        <button type="button" id="bouncebtn">Bounce</button>
+    </div>
+
+
+    <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="./libs/jquery-ui-1.13.1/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // console.log("hi");
+
+            // effect ()
+
+            // selector.effect(type,speed);
+            // selector.effect(type,{param},speed)
+
+            $("#shkbtn").click(function () {
+                // $(".square1").effect("shake", 1000);
+                // $(".square1").effect("shake", 2000);
+                // $(".square1").effect("shake", "slow");
+
+                $(".square1").effect("shake", {
+                    direction: "left",
+                    // direction: "right"
+                    // direction: "up"
+                    // direction: "down",
+                    times: 5,
+                    distance: 200
+                }, 5000)
+
+            });
+
+
+            $("#bouncebtn").click(function () {
+                // $(".square2").effect("bounce", 1000);
+                // $(".square2").effect("bounce", "fast");
+                // $(".square2").effect("bounce", "slow");
+
+                $(".square2").effect("bounce", {
+                    // direction: "left"
+                    // direction: "right"
+                    direction: "up",
+                    // direction: "down"
+                    distance: 200
+                }, 5000);
+            })
+
+
+
+        });
+    </script>
+</body>
+
+</html>

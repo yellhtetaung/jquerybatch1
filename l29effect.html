@@ -77,6 +77,8 @@
         <button type="button" id="stopbtn">Stop</button>
         <button type="button" id="stoptruebtn">Stop(ture)</button>
         <button type="button" id="finishbtn">Finish</button>
+        <button type="button" id="dqbtn">Dequeue</button>
+        <button type="button" id="cqbtn">Clear Queue</button>
 
     </div>
 
@@ -415,6 +417,43 @@
             $("#finishbtn").click(function () {
                 $(".square1").finish(); // method အားလုံးကိုကျော်ပြီး နောက်ဆုံး method ကိုပဲ အလုပ်လုပ်သွားမယ်။
             })
+
+
+            // dequeue
+
+            $("#dqbtn").click(function () {
+                var div5 = $(".square5")
+                // div5.animate({ width: 300, height: 300 }, "slow");
+                // div5.animate({ width: 200, height: 200 }, "slow");
+
+                // div5.animate({ width: 300, height: 300 }, "slow");
+                // div5.animate({ width: 200, height: 200 }, "slow");
+                // div5.css("background-color", "steelblue");
+
+                // div5.animate({ width: 300, height: 300 }, "slow");
+                // div5.animate({ width: 200, height: 200 }, "slow")
+                // div5.queue(function () {
+                //     div5.css("background-color", "steelblue");
+                // })
+
+                div5.animate({ width: 300, height: 300 }, "slow");
+                div5.animate({ width: 200, height: 200 }, "slow")
+                div5.queue(function () {
+                    div5.css("background-color", "steelblue");
+                    div5.dequeue();
+                });
+                div5.slideUp("slow");
+                div5.slideDown("slow");
+
+                console.log("Total Queue : " + div5.queue().length)
+            });
+
+            // clearQueue
+
+            $("#cqbtn").click(function () {
+                // $(".square5").clearQueue();
+                $(".square1").clearQueue();
+            });
 
         });
     </script>
