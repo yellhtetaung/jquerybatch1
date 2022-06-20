@@ -29,7 +29,8 @@
         }
 
         .square1,
-        .square7 {
+        .square7,
+        .square13 {
             background-color: green;
         }
 
@@ -75,11 +76,23 @@
         <div class="box square10">10</div>
         <div class="box square11">11</div>
         <div class="box square12">12</div>
+        <div class="box square13">13</div>
     </div>
 
     <div class="control">
-        <button type="button" id="shkbtn">Shake</button>
+        <button type="button" id="shakebtn">Shake</button>
         <button type="button" id="bouncebtn">Bounce</button>
+        <button type="button" id="blindbtn">Blind</button>
+        <button type="button" id="clipbtn">Clip</button>
+        <button type="button" id="dropbtn">Drop</button>
+        <button type="button" id="explodebtn">Explode</button>
+        <button type="button" id="fadebtn">Fade</button>
+        <button type="button" id="foldbtn">Fold</button>
+        <button type="button" id="highlightbtn">Highlight</button>
+        <button type="button" id="puffbtn">Puff</button>
+        <button type="button" id="pulsatebtn">Pulsate</button>
+        <button type="button" id="sizebtn">Size</button>
+        <button type="button" id="slidebtn">Slide</button>
     </div>
 
 
@@ -91,24 +104,31 @@
             // console.log("hi");
 
             // effect ()
-
             // selector.effect(type,speed);
-            // selector.effect(type,{param},speed)
+            // selector.effect(type,{param},speed);
 
-            $("#shkbtn").click(function () {
+            $(".square1,.square2,.square3,.square4,.square5,.square6,.square7,.square8,.square9,.square10,.square11,.square12,.square13").hide();
+
+
+            $("#shakebtn").click(function () {
                 // $(".square1").effect("shake", 1000);
                 // $(".square1").effect("shake", 2000);
                 // $(".square1").effect("shake", "slow");
 
-                $(".square1").effect("shake", {
-                    direction: "left",
-                    // direction: "right"
-                    // direction: "up"
-                    // direction: "down",
-                    times: 5,
-                    distance: 200
-                }, 5000)
+                // $(".square1").effect("shake", {
+                //     direction: "left",
+                //     // direction: "right"
+                //     // direction: "up"
+                //     // direction: "down",
+                //     times: 5,
+                //     distance: 200
+                // }, 5000);
 
+                // $(".square1").hide("shake", 1000);
+
+                // $(".square1").show("shake", 1000);
+
+                $(".square1").toggle("shake", 1000);
             });
 
 
@@ -117,17 +137,146 @@
                 // $(".square2").effect("bounce", "fast");
                 // $(".square2").effect("bounce", "slow");
 
-                $(".square2").effect("bounce", {
-                    // direction: "left"
-                    // direction: "right"
-                    direction: "up",
-                    // direction: "down"
-                    distance: 200
-                }, 5000);
-            })
+                // $(".square2").effect("bounce", {
+                //     // direction: "left"
+                //     // direction: "right"
+                //     direction: "up",
+                //     // direction: "down"
+                //     distance: 200
+                // }, 5000);
+
+                // $('.square2').show("bounce", "slow");
+            });
 
 
+            $('#blindbtn').click(function () {
+                // $('.square3').effect("blind", 1000);
 
+                // $(".square3").effect("blind", {
+                //     //direction: "left",
+                //     direction: "right",
+                //     // direction: "up", //default
+                //     direction: "down",
+                // }, 1000);
+
+                $('.square3').show("blind", 1000);
+
+            });
+
+            $('#clipbtn').click(function () {
+                // $(".square4").effect("clip", 1000);
+
+                // $(".square4").effect("clip", "fast");
+                // $(".square4").effect("clip", "slow");
+
+                $(".square4").show("clip", "slow");
+
+            });
+
+            $("#dropbtn").click(function () {
+                // $(".square5").effect("drop", 1000);
+
+                // $(".square5").effect("drop", {
+                //     // direction: "left", // defatult
+                //     // direction: "right",
+                //     // direction: "up",
+                //     direction: "down"
+                // }, 2000);
+
+                $(".square5").show("drop", 1000);
+
+            });
+
+            $("#explodebtn").click(function () {
+                // $(".square6").effect("explode", 1000);
+
+                // $(".square6").effect("explode", "fast");
+
+                // $(".square6").effect("explode", "slow");
+
+
+                $(".square6").show("explode", "slow");
+            });
+
+            $("#fadebtn").click(function () {
+                // $(".square7").effect("fade", 1000);
+
+                // $(".square7").effect("fade", "fast");
+
+                // $(".square7").effect("fade", "slow");
+
+                $(".square7").show("fade", 1000);
+
+            });
+
+            $("#foldbtn").click(function () {
+                // $(".square8").effect("fold", 1000);
+
+                // $(".square8").effect("fold", "fast");
+
+                // $(".square8").effect("fold", "slow");
+
+                $(".square8").show("fold", 1000);
+
+            });
+
+            $("#highlightbtn").click(function () {
+                // $(".square9").effect("highlight", 1000);
+
+                // $(".square9").effect("highlight", {
+                //     color: "red"
+                // }, 1000);
+
+                $(".square9").show("highlight", 1000);
+
+            });
+
+            $("#puffbtn").click(function () {
+                // $(".square10").effect("puff", 1000);
+
+                // $(".square10").effect("puff", "fast");
+
+                // $(".square10").effect("puff", "slow");
+
+                $(".square10").show("puff", 1000);
+
+            });
+
+            $("#pulsatebtn").click(function () {
+                // $(".square11").effect("pulsate", 1000);
+
+                // $(".square11").effect("pulsate", {
+                //     time: 10
+                // }, 1000);
+
+                $(".square11").show("pulsate", 1000);
+
+            });
+
+            $("#sizebtn").click(function () {
+                // $(".square12").effect("size", 1000);
+
+                // $(".square12").effect("size", "fast"); 
+
+                // $(".square12").effect("size", "slow");
+
+                $(".square12").show("size", 1000);
+
+            });
+
+            $("#slidebtn").click(function () {
+                // $('.square13').effect("slide", 1000);
+
+                // $('.square13').effect("slide", {
+                //     // direction: "left", // defatult
+                //     // direction: "right",
+                //     // direction: "up",
+                //     direction: "down"
+                // }, 1000);
+
+                $('.square13').show("slide", 1000);
+
+            });
         });
     </script>
 </body>
