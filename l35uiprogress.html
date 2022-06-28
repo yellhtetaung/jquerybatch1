@@ -16,6 +16,18 @@
         .container {
             width: 700px;
         }
+
+        #progress2 {
+            position: relative;
+        }
+
+        .progresslabel {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 
@@ -26,7 +38,7 @@
         <div id="progress1"></div>
 
         <h1>CSS</h1>
-        <div id="progress2"></div>
+        <div id="progress2"><span class="progresslabel">20%</span></div>
 
         <h1>jQuery</h1>
         <div id="progress3"></div>
