@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>:empty & :not() Selector</title>
+    <title>:fast & :last() Selector</title>
 
     <style type="text/css">
         body {
@@ -11,11 +11,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .box {
-            width: 200px;
-            height: 100px;
         }
     </style>
 </head>
@@ -49,21 +44,6 @@
             <li></li>
             <li>Peach</li>
         </ol>
-
-        <hr />
-
-        <div>
-            <p class="box"></p>
-
-            <p>Hello i am p tag. inside of div</p>
-
-            <p></p>
-        </div>
-
-        <div class="box"></div>
-
-        <p class="box"></p>
-
     </div>
 
     <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
@@ -71,21 +51,18 @@
         $(document).ready(function () {
             // console.log('hi');
 
-            // :empty
-            // $(":empty").css("background-color", "steelblue");
+            // :first
 
-            // $('ul li:empty').css('background-color', 'steelblue');
-            // $('ol li:empty').css('background-color', 'steelblue');
+            // $("ul li:first").css("background-color", "steelblue");
+            $("li:first").css("background-color", "orange");
 
-            // $('p:empty').css('background-color', 'orange');
+            // :last
 
-            // :not()
+            // $("ol li:last").css("background-color", "steelblue");
+            $("li:last").css("background-color", "violet")
 
-            // $("li:not(ol li)").css("background-color", "violet");
-            // $("li:not(ul li)").css("background-color", "pink");
 
-            // $("li:not(ul li:empty)").css('background-color', "pink");
-            $("li:not(:empty)").css("background-color", "orange");
+
         });
     </script>
 </body>
