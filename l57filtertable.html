@@ -1,227 +1,224 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Filter Table</title>
-    <style type="text/css">
-      * {
-        box-sizing: border-box;
-      }
 
-      body {
-        height: 100vh;
+<head>
+  <title>Filter Table</title>
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    body {
+      height: 100vh;
 
-      .container {
-        width: 700px;
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .form-control {
-        width: 100%;
+    .container {
+      width: 700px;
+    }
 
-        font-size: 16px;
-        border: 1px solid #ddd;
+    .form-control {
+      width: 100%;
 
-        padding: 12px 20px 12px 50px;
-        margin-bottom: 15px;
-      }
+      font-size: 16px;
+      border: 1px solid #ddd;
 
-      .form-control:focus {
-        outline: none;
-      }
+      padding: 12px 20px 12px 50px;
+      margin-bottom: 15px;
+    }
 
-      #datatable {
-        width: 100%;
-        border: 1px solid #ccc;
-        border-collapse: collapse;
-      }
+    .form-control:focus {
+      outline: none;
+    }
 
-      #datatable .header {
-        background-color: #f4f4f4;
-      }
+    #datatable {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
 
-      #datatable tr {
-        border-bottom: 1px solid #ccc;
-      }
+    #datatable .header {
+      background-color: #f4f4f4;
+    }
 
-      #datatable th,
-      #datatable td {
-        text-align: left;
-        padding: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h2>Customer List</h2>
+    #datatable tr {
+      border-bottom: 1px solid #ccc;
+    }
 
-      <input
-        type="text"
-        name="search"
-        id="search"
-        class="form-control"
-        placeholder="Search for something..."
-      />
+    #datatable th,
+    #datatable td {
+      text-align: left;
+      padding: 10px;
+    }
+  </style>
+</head>
 
-      <table id="datatable">
-        <thead>
-          <th style="width: 60%">Name</th>
-          <th style="width: 10%">Age</th>
-          <th style="width: 30%">City</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Aung Aung</td>
-            <td>20</td>
-            <td>Yangon</td>
-          </tr>
-          <tr>
-            <td>Maung Maung</td>
-            <td>25</td>
-            <td>Mandalay</td>
-          </tr>
-          <tr>
-            <td>Su Su</td>
-            <td>20</td>
-            <td>Bago</td>
-          </tr>
-          <tr>
-            <td>Hla Hla</td>
-            <td>20</td>
-            <td>Mawlamyine</td>
-          </tr>
-          <tr>
-            <td>Mya Mya</td>
-            <td>21</td>
-            <td>Yangon</td>
-          </tr>
-          <tr>
-            <td>Yu Yu</td>
-            <td>31</td>
-            <td>Yangon</td>
-          </tr>
-          <tr>
-            <td>Kyaw Kyaw</td>
-            <td>25</td>
-            <td>Mandalay</td>
-          </tr>
-          <tr>
-            <td>Zaw Zaw</td>
-            <td>18</td>
-            <td>Mandalay</td>
-          </tr>
-          <tr>
-            <td>Zin Zin</td>
-            <td>16</td>
-            <td>Bago</td>
-          </tr>
-          <tr>
-            <td>Yin Yin</td>
-            <td>18</td>
-            <td>Mawlamyine</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<body>
+  <div class="container">
+    <h2>Customer List</h2>
 
-    <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        // console.log("hi");
+    <input type="text" name="search" id="search" class="form-control" placeholder="Search for something..." />
 
-        $("#search").keyup(function () {
-          var getinput = $(this).val().toLowerCase();
-          // console.log(getinput);
+    <table id="datatable">
+      <thead>
+        <th style="width: 60%">Name</th>
+        <th style="width: 10%">Age</th>
+        <th style="width: 30%">City</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aung Aung</td>
+          <td>20</td>
+          <td>Yangon</td>
+        </tr>
+        <tr>
+          <td>Maung Maung</td>
+          <td>25</td>
+          <td>Mandalay</td>
+        </tr>
+        <tr>
+          <td>Su Su</td>
+          <td>20</td>
+          <td>Bago</td>
+        </tr>
+        <tr>
+          <td>Hla Hla</td>
+          <td>20</td>
+          <td>Mawlamyine</td>
+        </tr>
+        <tr>
+          <td>Mya Mya</td>
+          <td>21</td>
+          <td>Yangon</td>
+        </tr>
+        <tr>
+          <td>Yu Yu</td>
+          <td>31</td>
+          <td>Yangon</td>
+        </tr>
+        <tr>
+          <td>Kyaw Kyaw</td>
+          <td>25</td>
+          <td>Mandalay</td>
+        </tr>
+        <tr>
+          <td>Zaw Zaw</td>
+          <td>18</td>
+          <td>Mandalay</td>
+        </tr>
+        <tr>
+          <td>Zin Zin</td>
+          <td>16</td>
+          <td>Bago</td>
+        </tr>
+        <tr>
+          <td>Yin Yin</td>
+          <td>18</td>
+          <td>Mawlamyine</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-          // filter for all columns A
-          // $("#datatable tr").filter(function () {
-          //   // console.log($("#datatable tr"));
-          //   // console.log($(this));
-          //
-          //   // console.log($(this).text());
-          //   // console.log($(this).text().toLowerCase().indexOf(getinput));
-          //
-          //   $(this).toggle($(this).text().toLowerCase().indexOf(getinput) > -1);
-          // });
+  <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // console.log("hi");
 
-          // filter for all columns B
-          // $("#datatable tr").filter(function () {
-          //   if ($(this).text().toLowerCase().indexOf(getinput) > -1) {
-          //     $(this).show();
-          //   } else {
-          //     $(this).hide();
-          //   }
-          // });
+      $("#search").keyup(function () {
+        var getinput = $(this).val().toLowerCase();
+        // console.log(getinput);
 
-          // filter for all columns C
-          // $("#datatable tr").filter(function () {
-          //   if ($(this).text().toLowerCase().indexOf(getinput) > -1) {
-          //     $(this).css({
-          //       display: "",
-          //       // display: "table-row",
-          //     });
-          //   } else {
-          //     $(this).css({
-          //       display: "none",
-          //     });
-          //   }
-          // });
+        // filter for all columns A
+        // $("#datatable tr").filter(function () {
+        //   // console.log($("#datatable tr"));
+        //   // console.log($(this));
+        //
+        //   // console.log($(this).text());
+        //   // console.log($(this).text().toLowerCase().indexOf(getinput));
+        //
+        //   $(this).toggle($(this).text().toLowerCase().indexOf(getinput) > -1);
+        // });
 
-          // filter for first column A
-          // $("#datatable tr").filter(function () {
-          //  $(this).toggle(
-          //    $(this).children(":last").text().toLowerCase().indexOf(getinput) >
-          //      -1
-          //  );
-          // });
+        // filter for all columns B
+        // $("#datatable tr").filter(function () {
+        //   if ($(this).text().toLowerCase().indexOf(getinput) > -1) {
+        //     $(this).show();
+        //   } else {
+        //     $(this).hide();
+        //   }
+        // });
 
-          // filter for first column B
-          // $("#datatable tr").filter(function () {
-          //   $(this).toggle(
-          //     $(this).children().eq(2).text().toLowerCase().indexOf(getinput) >
-          //       -1
-          //   );
-          // });
+        // filter for all columns C
+        // $("#datatable tr").filter(function () {
+        //   if ($(this).text().toLowerCase().indexOf(getinput) > -1) {
+        //     $(this).css({
+        //       display: "",
+        //       // display: "table-row",
+        //     });
+        //   } else {
+        //     $(this).css({
+        //       display: "none",
+        //     });
+        //   }
+        // });
 
-          // filter for first column C
-          // $("#datatable tr").filter(function () {
-          //   $(this).toggle(
-          //     $(this).children().text().toLowerCase().indexOf(getinput) > -1
-          //   );
-          // });
+        // filter for first column A
+        // $("#datatable tr").filter(function () {
+        //  $(this).toggle(
+        //    $(this).children(":last").text().toLowerCase().indexOf(getinput) >
+        //      -1
+        //  );
+        // });
 
-          // filter for first column C
-          // $("#datatable tr").filter(function () {
-          //   $(this).toggle(
-          //     $(this).children(":eq()").text().toLowerCase().indexOf(getinput) >
-          //       -1
-          //   );
-          // });
+        // filter for first column B
+        // $("#datatable tr").filter(function () {
+        //   $(this).toggle(
+        //     $(this).children().eq(2).text().toLowerCase().indexOf(getinput) >
+        //       -1
+        //   );
+        // });
 
-          // filter for all column D
-          $("#datatable tr").filter(function () {
-            if (
-              $(this)
-                .children(":eq(0)")
-                .text()
-                .toLowerCase()
-                .indexOf(getinput) > -1
-            ) {
-              $(this).css({
-                display: "",
-                // display: "table-row",
-              });
-            } else {
-              $(this).css({
-                display: "none",
-              });
-            }
-          });
+        // filter for first column C
+        // $("#datatable tr").filter(function () {
+        //   $(this).toggle(
+        //     $(this).children().text().toLowerCase().indexOf(getinput) > -1
+        //   );
+        // });
+
+        // filter for first column C
+        // $("#datatable tr").filter(function () {
+        //   $(this).toggle(
+        //     $(this).children(":eq()").text().toLowerCase().indexOf(getinput) >
+        //       -1
+        //   );
+        // });
+
+        // filter for all column D
+        $("#datatable tr").filter(function () {
+          if (
+            $(this)
+              .children(":eq(0)")
+              .text()
+              .toLowerCase()
+              .indexOf(getinput) > -1
+          ) {
+            $(this).css({
+              display: "",
+              // display: "table-row",
+            });
+          } else {
+            $(this).css({
+              display: "none",
+            });
+          }
         });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
